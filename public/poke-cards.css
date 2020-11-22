@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
+    
+img{
+    width: 600px;
+    height: 400px;
+     max-width: 100%;
+    display: block;
+}
+
+/*cerds basics classes*/
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    max-width: 1080px;
+}
+
+.card {
+    background-color: transparent;
+    width: 150px;
+    height:200px;
+    perspective: 1000px;
+    cursor: pointer;
+    border-radius: 15%;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 15%;;
+}
+
+.poke-id {
+    position: absolute;
+    left: 7%;
+    top: -1%;
+    z-index: 1;
+}
+
+.poke-name {
+    position: absolute;
+    left: center;
+    bottom: 2%;
+    z-index: 1;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+    border-radius: 15%;
+}
+
+.card-front {
+    color: black;
+    font-family: 'Stalinist One', cursive;
+    font-size: 0.6em;
+}
+
+.card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Clesses for pokemon type */
+.fire{
+    background-color: red;
+}
+
+.grasspoison{
+    background-image: linear-gradient(purple, green);
+}    
