@@ -37,7 +37,10 @@ import { svg_element } from 'svelte/internal'
 
 	
 	function retrieveFavorites() {
-		let favs = window.localStorage.getItem('favoritesId').split(","); 
+		let favs;
+		
+		if(window.localStorage.getItem('favoritesId') != null) 
+			favs = window.localStorage.getItem('favoritesId').split(",");	 
 
 		for(let pos = 0; pos < favs.length; pos++){
 
