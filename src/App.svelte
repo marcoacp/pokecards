@@ -39,17 +39,18 @@ import { svg_element } from 'svelte/internal'
 	function retrieveFavorites() {
 		let favs;
 		
-		if(window.localStorage.getItem('favoritesId') != null) 
-			favs = window.localStorage.getItem('favoritesId').split(",");	 
+		if ( window.localStorage.getItem('favoritesId') != null ) {
 
-		for(let pos = 0; pos < favs.length; pos++){
+			favs = window.localStorage.getItem('favoritesId').split(",");
+			for(let pos = 0; pos < favs.length; pos++){
 
-			for(let aux = 0; aux < $pokelist.length; aux++) {
-				if( favs[pos] == $pokelist[aux].id ) {
-					$favorites = [...$favorites, $pokelist[aux]]
+				for(let aux = 0; aux < $pokelist.length; aux++) {
+					if( favs[pos] == $pokelist[aux].id ) {
+						$favorites = [...$favorites, $pokelist[aux]]
+					}
 				}
-			}
-		}
+			}	
+		} 
 
 	}
 
