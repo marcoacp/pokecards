@@ -14,15 +14,13 @@ Clone or download the repo
 npm install
 ```
 ### Development
- Start a local server to modify the app
- The app will run in http://localhost:5000/ 
+ Start a local server to run/modify the app
 
 ```bash
 npm run dev
 ```
 ### build
 To build your version of the app
-The builds files will be in public/build/
 
 ```bash
 npm run build
