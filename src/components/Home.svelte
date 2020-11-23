@@ -8,7 +8,7 @@
     <p>Thanks!</p>
     <p>Note:</p>
     <p>The app is not ready, it's a little slow and has only the first 151 pokémons</p>
-    <p>For details or feedback, please go to the app repo</p>
+    <p>For details or feedback, please go to the <a href="https://github.com/marcoacp/pokecards" target="_blank">github repo </a></p>
 </div>
 
 <style>
@@ -27,5 +27,10 @@
         color:var(--text-color);
     }
 
+    .notes a {
+        font-weight: bold;
+        text-decoration: none;
+        color:var(--text-color);
+    }
 
 </style>
